@@ -1,4 +1,4 @@
-package com.github.yhao3.excelpro.domain;
+package com.github.yhao3.excelgen4j.domain;
 
 import java.util.LinkedHashSet;
 import java.util.Set;

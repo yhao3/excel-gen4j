@@ -1,9 +1,9 @@
-package com.github.yhao3.excelpro.error;
+package com.github.yhao3.excelgen4j.error;
 
 /**
- * The common exception to ExcelPro SDK.
+ * The invalid key exception, e.g. {{}}.
  */
-public class InvalidKeyException extends ExcelProException {
+public class InvalidKeyException extends ExcelGen4jException {
 
     public InvalidKeyException(String message) {
         super(message);

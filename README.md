@@ -29,7 +29,7 @@ Add the following Maven dependency to your project:
 ```xml
 <dependency>
     <groupId>com.github.yhao3</groupId>
-    <artifactId>excel-pro</artifactId>
+    <artifactId>excel-gen4j</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```

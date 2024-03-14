@@ -1,9 +1,9 @@
-package com.github.yhao3.excelpro;
+package com.github.yhao3.excelgen4j;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import com.github.yhao3.excelpro.error.InvalidKeyException;
-import com.github.yhao3.excelpro.excel.ExcelGenerator;
+import com.github.yhao3.excelgen4j.error.InvalidKeyException;
+import com.github.yhao3.excelgen4j.excel.ExcelGenerator;
 import com.opencsv.exceptions.CsvException;
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;

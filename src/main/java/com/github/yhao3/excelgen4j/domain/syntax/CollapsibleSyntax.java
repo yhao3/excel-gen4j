@@ -1,4 +1,4 @@
-package com.github.yhao3.excelpro.domain.syntax;
+package com.github.yhao3.excelgen4j.domain.syntax;
 
 public abstract class CollapsibleSyntax extends Syntax {
 

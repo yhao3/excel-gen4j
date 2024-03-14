@@ -1,9 +1,9 @@
-package com.github.yhao3.excelpro.processor;
+package com.github.yhao3.excelgen4j.processor;
 
-import com.github.yhao3.excelpro.domain.CellRef;
-import com.github.yhao3.excelpro.domain.DataRef;
-import com.github.yhao3.excelpro.domain.ParameterRef;
-import com.github.yhao3.excelpro.error.ExcelProException;
+import com.github.yhao3.excelgen4j.domain.CellRef;
+import com.github.yhao3.excelgen4j.domain.DataRef;
+import com.github.yhao3.excelgen4j.domain.ParameterRef;
+import com.github.yhao3.excelgen4j.error.ExcelGen4jException;
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.util.List;
@@ -23,7 +23,7 @@ public class CsvToExcelProcessor {
             createCellAndValue(cellRef.getColIndex(), value, sheet, rowNum);
             mergeCell(cellRef.getMergeColumnAmount(), sheet, rowNum, cellRef.getColIndex());
         } else {
-            throw new ExcelProException("The cell value is only allowed to be String type!");
+            throw new ExcelGen4jException("The cell value is only allowed to be String type!");
         }
     }
 
@@ -50,7 +50,7 @@ public class CsvToExcelProcessor {
                 try {
                     value = declaredField.get(data);
                 } catch (Exception e) {
-                    throw new ExcelProException("Maybe the data list and the class " + clazz.getName() + " are not matched!");
+                    throw new ExcelGen4jException("Maybe the data list and the class " + clazz.getName() + " are not matched!");
                 }
                 if (Objects.equals(declaredField.getName().toLowerCase(), dataRef.getKey().toLowerCase())) {
                     processDataRefVal(value, sheet, rowNum + i, dataRef.getColIndex(), dataRef.getMergeColumnAmount());
@@ -93,7 +93,7 @@ public class CsvToExcelProcessor {
 
         Object obj = parametersMap.get(parameterRef.getKey());
         if (obj == null) {
-            throw new ExcelProException("The parameter \"" + parameterRef.getKey() + "\" is not found!");
+            throw new ExcelGen4jException("The parameter \"" + parameterRef.getKey() + "\" is not found!");
         }
         processDataRefVal(obj, sheet, rowNum, parameterRef.getColIndex(), parameterRef.getMergeColumnAmount());
     }

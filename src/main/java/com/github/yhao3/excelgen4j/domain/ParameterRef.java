@@ -1,6 +1,6 @@
-package com.github.yhao3.excelpro.domain;
+package com.github.yhao3.excelgen4j.domain;
 
-public class DataRef extends CellRef {
+public class ParameterRef extends CellRef {
 
     private String key;
 
