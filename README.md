@@ -1,9 +1,9 @@
-# Excel Pro
+# Excelgen4j (Excel Generator for Java)
 
 ## Introduction
 
 Simply define the Excel template using CSV format, and Excel Pro can quickly generate Excel files.
-Excel Pro is a Java SDK for exporting Excel files, built on top of [Apache POI](https://poi.apache.org/) and [OpenCSV](https://opencsv.sourceforge.net/). With Excel Pro, you can easily generate Excel files by defining the Excel template using CSV format.
+Excelgen4j is a Java SDK for exporting Excel files, built on top of [Apache POI](https://poi.apache.org/) and [OpenCSV](https://opencsv.sourceforge.net/). With Excelgen4j, you can easily generate Excel files by defining the Excel template using CSV format.
 
 ## Syntax
 
